@@ -95,6 +95,7 @@ namespace CryptoApp
             }catch(InCompatibleFormatException ex)
             {
                 await new MessageDialog("Incompatable").ShowAsync();
+                return;
             }
                 controller = new CryptoController(model, view);
       
