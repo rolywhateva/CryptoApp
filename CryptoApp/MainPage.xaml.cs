@@ -29,9 +29,10 @@ namespace CryptoApp
         public MainPage()
         {
             this.InitializeComponent();
+           
         }
 
-        SymmetricAlgorithm algorithm;
+        SymmetricAlgorithm algorithm = null;
         CipherMode cipherMode;
         CryptoController controller;
         CryptoView view;
@@ -56,7 +57,7 @@ namespace CryptoApp
                 }
             }
         }
-        private  async void RadioButton_Checked_EncryptionMode(object sender, RoutedEventArgs e)
+        private   void RadioButton_Checked_EncryptionMode(object sender, RoutedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
             if (button != null)
@@ -76,6 +77,12 @@ namespace CryptoApp
         }
         private async  void CryptoButton_Click(object sender, RoutedEventArgs e)
         {
+        
+            if (algorithm==null)
+            {
+                await new MessageDialog("You haven't selected an algorithm!").ShowAsync();
+                return;
+            }
 
          
             clearTextBox.Document.GetText(Windows.UI.Text.TextGetOptions.None, out string clearText);
