@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="CryptoApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CryptoApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel  Orientation="Horizontal">
+            <StackPanel Margin="25,0,0,0" >
+         
+                <StackPanel Orientation="Vertical" >
+
+                    <TextBlock Text="Select Algorithm type:" FontFamily="Arial" FontSize="36"/>
+                    <StackPanel Orientation="Vertical" Margin="25,0,0,0">
+                        <RadioButton Content="Aes" Tag="Aes" Checked="RadioButton_Checked_AlgorithmType" IsChecked="True"/>
+                        <RadioButton Content="DES" Tag="DES" Checked="RadioButton_Checked_AlgorithmType"/>
+                        <RadioButton Content="RC2" Tag="RC2" Checked="RadioButton_Checked_AlgorithmType"/>
+                        <RadioButton Content="TripleDES" Tag="TripleDes" Checked="RadioButton_Checked_AlgorithmType"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+
+                <TextBlock Text="Select  Cipher mode :" FontFamily="Arial" FontSize="36"/>
+                <StackPanel Orientation="Vertical" Margin="25,0,0,0">
+                    <RadioButton Content="CBC" Tag="CBC" Checked="RadioButton_Checked_EncryptionMode" IsChecked="True"/>
+                    <RadioButton Content="CFB" Tag="CFB" Checked="RadioButton_Checked_EncryptionMode"/>
+                    <RadioButton Content="CTS" Tag="CTS" Checked="RadioButton_Checked_EncryptionMode"/>
+                    <RadioButton Content="ECB" Tag="ECB" Checked="RadioButton_Checked_EncryptionMode"/>
+                        <RadioButton Content="OFB" Tag="OFB" Checked="RadioButton_Checked_EncryptionMode"/>
+                    </StackPanel>
+
+            </StackPanel>
+            
+                <StackPanel Orientation="Vertical">
+                    <TextBox x:Name="pathTextBox" HorizontalAlignment="Left" Width="400px" IsEnabled="False" Margin="25,15" ></TextBox>
+                   
+                    <Button x:Name="FileButton" Content="Choose file"   Margin="25,15"  Click="FileButton_Click" IsEnabled="False"></Button>
+               
+                  </StackPanel>
+                <Button  x:Name="CryptoButton"  Margin="0,50" Content="Criptare" Click="CryptoButton_Click"/>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock  FontFamily="Arial" FontSize="36">
+                        Clear Text:
+                    </TextBlock>
+                   
+                    <RichEditBox x:Name="clearTextBox" Width="400" Height="400"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock  FontFamily="Arial" FontSize="36">
+                       Crypted Text:
+                    </TextBlock>
+                    <RichEditBox x:Name="cryptedTextBox" Width="400" Height="400" IsEnabled="False"/>
+                </StackPanel>
+            </StackPanel>
+           
+
+        </StackPanel>
+            
+
+      
+
+    </Grid>
+</Page>

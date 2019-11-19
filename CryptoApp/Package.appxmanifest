@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap mp uap3 uap6 iot uap4 uap2">
+
+  <Identity
+    Name="5375b98e-1a5f-40b8-a4a5-b2c244fcdf7b"
+    Publisher="CN=user"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="5375b98e-1a5f-40b8-a4a5-b2c244fcdf7b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>CryptoApp</DisplayName>
+    <PublisherDisplayName>user</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="CryptoApp.App">
+      <uap:VisualElements
+        DisplayName="CryptoApp"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="CryptoApp"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+   
+    <Capability Name="internetClient" />
+    <Capability Name="allJoyn"/>
+     <rescap:Capability Name="appCaptureSettings"/>
+    <uap3:Capability Name="backgroundMediaPlayback"/>
+    <uap:Capability Name="appointments"/>
+    <uap:Capability Name="blockedChatMessages"/>
+    <uap:Capability Name="chat"/>
+    <Capability Name="codeGeneration"/>
+    <uap:Capability Name="documentsLibrary"/>
+    <uap:Capability Name="contacts"/>
+    <uap:Capability Name="enterpriseAuthentication"/>
+    <uap6:Capability Name="graphicsCapture"/>
+    <Capability Name="internetClientServer"/>
+    <iot:Capability Name="lowLevelDevices"/>
+    <uap:Capability Name="musicLibrary"/>
+    <uap:Capability Name="objects3D"/>
+    <uap4:Capability Name="offlineMapsManagement"/>
+    <uap:Capability Name="phoneCall"/>
+    <uap2:Capability Name="phoneCallHistoryPublic"/>
+    <Capability Name="privateNetworkClientServer"/>
+    
+    <uap:Capability Name="picturesLibrary"/>
+ 
+    <DeviceCapability Name="bluetooth"/>
+    <DeviceCapability Name="gazeInput"/>
+    <DeviceCapability Name="location"/>
+    <DeviceCapability Name="lowLevel"/>
+    <DeviceCapability Name="pointOfService"/>
+    <DeviceCapability Name="proximity"/>
+    <DeviceCapability Name="microphone"/>
+
+  </Capabilities>
+</Package>
