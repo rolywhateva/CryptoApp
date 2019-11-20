@@ -16,7 +16,7 @@
 
                     <TextBlock Text="Select Algorithm:" FontFamily="Arial" FontSize="36"/>
                     <StackPanel Orientation="Vertical" Margin="25,0,0,0">
-                        <RadioButton x:Name="defaultAlgo" Content="Aes" Tag="Aes" Checked="RadioButton_Checked_AlgorithmType" IsChecked="True" />
+                        <RadioButton x:Name="defaultAlgo"  GroupName="AlgorithmOptions" Content="Aes" Tag="Aes" Checked="RadioButton_Checked_AlgorithmType" IsChecked="True" />
                         <RadioButton GroupName="AlgorithmOptions"  Content="DES" Tag="DES" Checked="RadioButton_Checked_AlgorithmType"/>
                         <RadioButton  GroupName="AlgorithmOptions" Content="RC2" Tag="RC2" Checked="RadioButton_Checked_AlgorithmType"/>
                         <RadioButton  GroupName="AlgorithmOptions" Content="TripleDES" Tag="TripleDes" Checked="RadioButton_Checked_AlgorithmType"/>
@@ -27,7 +27,7 @@
 
                 <TextBlock Text="Select  Cipher mode :" FontFamily="Arial" FontSize="36"/>
                 <StackPanel Orientation="Vertical" Margin="25,0,0,0">
-                    <RadioButton  x:Name="defaultCipher" Content="CBC" Tag="CBC" Checked="RadioButton_Checked_EncryptionMode" IsChecked="True"/>
+                        <RadioButton   GroupName="CipherOptions" x:Name="defaultCipher" Content="CBC" Tag="CBC" Checked="RadioButton_Checked_EncryptionMode" IsChecked="True"/>
                     <RadioButton GroupName="CipherOptions" Content="CFB" Tag="CFB" Checked="RadioButton_Checked_EncryptionMode"/>
                         <RadioButton  GroupName="CipherOptions" Content="CTS" Tag="CTS" Checked="RadioButton_Checked_EncryptionMode"/>
                         <RadioButton  GroupName="CipherOptions" Content="ECB" Tag="ECB" Checked="RadioButton_Checked_EncryptionMode"/>
